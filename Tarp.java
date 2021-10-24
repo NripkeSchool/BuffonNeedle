@@ -13,6 +13,7 @@ public class Tarp
         this.needles = new ArrayList();
     }
     
+    //Method to generate random needles
     public void addRandomNeedle(int iterations)
     {
         for (int i = 0; i<iterations; i++)
@@ -22,6 +23,7 @@ public class Tarp
         }
     }
     
+    //Counts the number of times a needle crosses the line
     public int numberOfCrossings()
     {
       int total = 0;
@@ -39,6 +41,7 @@ public class Tarp
       return total;   
     }
     
+    //Computes the probabiltiy of a needle crossing a line
     public double fractionOfCrossings()
     {
       return (double) numberOfCrossings()/needles.size(); 
